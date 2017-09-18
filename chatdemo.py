@@ -124,7 +124,7 @@ def main():
         xsrf_cookies=True,
         debug=options.debug,
         )
-    app.listen(options.port || process.env.PORT)
+    app.listen(process.env.PORT)
     tornado.ioloop.IOLoop.current().start()
 
 
