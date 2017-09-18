@@ -110,7 +110,7 @@ class MessageUpdatesHandler(tornado.web.RequestHandler):
 
 
 def main():
-	port = int(os.environ.get('PORT', 8888))
+    port = int(os.environ.get('PORT', 8888))
     parse_command_line()
     app = tornado.web.Application(
         [
