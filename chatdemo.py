@@ -25,7 +25,6 @@ from tornado.concurrent import Future
 from tornado import gen
 from tornado.options import define, options, parse_command_line
 
-define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="run in debug mode")
 
 
@@ -111,6 +110,7 @@ class MessageUpdatesHandler(tornado.web.RequestHandler):
 
 
 def main():
+	port = int(os.environ.get('PORT', 8888))
     parse_command_line()
     app = tornado.web.Application(
         [
@@ -124,7 +124,7 @@ def main():
         xsrf_cookies=True,
         debug=options.debug,
         )
-    app.listen(process.env.PORT)
+    app.listen(port)
     tornado.ioloop.IOLoop.current().start()
 
 
