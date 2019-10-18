@@ -7,7 +7,7 @@ pew==0.1.26
 pip-tools==1.9.0
 pipenv==7.2.6
 pythonz-bd==1.11.4
-requests==2.18.4
+requests==2.20.0
 resumable-urlretrieve==0.1.5
 semver==2.7.8
 six==1.11.0
